@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    username: ${db.username}
+    hikari:
+      maximum-pool-size: ${db.maximum-pool-size}
+      connection-timeout: ${db.connection-timeout}
+    url: ${db.url}
+    password: ${db.password}
+  application:
+    name: microservice04
+  profiles:
+    default: prod
+  kafka:
+    consumer:
+      auto-offset-reset: latest
+      group-id: group-2
+      retries: 100
+      properties:
+        enable:
+          idempotent: true
+      bootstrap-servers: ${BROKER_URL}
+  config:
+    import: "optional:configserver:${CONFIG_SERVER}"
+server:
+  servlet:
+    context-path: /microservice04
+  port: 8085
+eureka:
+  instance:
+    instance-id: "${spring.application.name}:${random.value}"
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL}

@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: microservice05
+  profiles:
+    default: default
+  kafka:
+    producer:
+      properties:
+        enable:
+          idempotente: true
+      bootstrap-servers: ${BROKER_URL}
+server:
+  servlet:
+    context-path: /microservice05
+  port: 8087
+eureka:
+  instance:
+    instance-id: "${spring.application.name}:${random.value}"
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL}
+kafka:
+  topic: microservice05
+file:
+  ruta: ${RUTA_ZIP}

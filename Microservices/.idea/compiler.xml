@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ms-config-server" />
+        <module name="ms-discovery" />
+        <module name="microservice04" />
+        <module name="microservice05" />
+        <module name="microservice01" />
+        <module name="ms-gateway" />
+        <module name="microservice02" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Prueba" target="17" />
+      <module name="Prueba2" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Prueba" options="-parameters" />
+      <module name="Prueba2" options="-parameters" />
+      <module name="microservice01" options="-parameters" />
+      <module name="microservice02" options="-parameters" />
+      <module name="microservice04" options="-parameters" />
+      <module name="microservice05" options="-parameters" />
+      <module name="ms-config-server" options="-parameters" />
+      <module name="ms-discovery" options="-parameters" />
+      <module name="ms-gateway" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ms-gateway
+  profiles:
+    default: default
+server:
+  port: 4040
+eureka:
+  client:
+    fetch-registry: false
+    service-url:
+      defaultZone: ${EUREKA_URL}
